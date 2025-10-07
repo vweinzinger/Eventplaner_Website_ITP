@@ -29,14 +29,41 @@
         /* Team grid */
         .team {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 18px 24px;
-            justify-items: start;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            justify-items: center;
+            align-items: start;
         }
-        .member{display:flex;gap:12px;align-items:center}
-        .member img{width:72px;height:72px;border-radius:10px;object-fit:cover}
-        .member .info{font-size:0.95rem}
-        .member .info strong{display:block}
+
+        .member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: #f9fbfc;
+            padding: 16px;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+        }
+
+        .member img {
+            width: 100%;
+            max-width: 360px;
+            height: 360px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .member img:hover {
+            transform: scale(1.03);
+        }
+
+        .member .info {
+            font-size: 1rem;
+        }
+
 
         /* Meilensteine */
         .milestones{display:flex;flex-direction:column;gap:12px}
