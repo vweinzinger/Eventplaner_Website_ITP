@@ -1,10 +1,217 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Spirit-of-HIT — Eventplaner (DA)</title>
+    <meta name="description" content="DA: Spirit-of-HIT Eventplaner — Aufgabenstellung, Team, Status, Kontakt" />
+    <style>
+        /* --- Grundlayout --- */
+        :root{--accent:#0b7285;--muted:#6c757d;--bg:#f8fafc}
+        html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;background:var(--bg);color:#111}
+        .container{max-width:1100px;margin:28px auto;padding:28px;background:white;border-radius:12px;box-shadow:0 8px 30px rgba(11,20,30,0.06)}
+        header{display:flex;align-items:center;gap:18px}
+        .logo{width:84px;height:84px;flex:0 0 84px}
+        .logo img{width:100%;height:100%;object-fit:contain}
+        .title{flex:1}
+        h1{margin:0;font-size:1.5rem}
+        .meta{color:var(--muted);font-size:0.95rem}
+
+        nav{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+        nav a{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--accent);background:#e9f6f8;font-weight:600}
+
+        main{display:grid;grid-template-columns:1fr;gap:22px;margin-top:22px}
+        section{padding:18px;border-radius:10px;background:#fcfeff;border:1px solid rgba(11,114,133,0.03)}
+        section h2{margin-top:0}
+
+        /* Team grid */
+        .team{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+        .member{display:flex;gap:12px;align-items:center}
+        .member img{width:72px;height:72px;border-radius:10px;object-fit:cover}
+        .member .info{font-size:0.95rem}
+        .member .info strong{display:block}
+
+        /* Meilensteine */
+        .milestones{display:flex;flex-direction:column;gap:12px}
+        .ms{display:flex;flex-direction:column;gap:6px}
+        .bar{height:12px;background:#e9ecef;border-radius:999px;overflow:hidden}
+        .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#2fb0c6);width:0}
+        .ms .meta{font-size:0.85rem;color:var(--muted)}
+
+        footer{margin-top:18px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+        .contact{font-size:0.95rem}
+
+        /* Responsive */
+        @media (max-width:720px){.container{margin:12px;padding:16px}.logo{width:64px;height:64px}}
+    </style>
 </head>
 <body>
+<div class="container">
+    <header>
+        <div class="logo">
+            <!-- lokales Bild: images/tgm_logo.png  -->
+            <img src="images/tgm_logo.png" alt="TGM Logo" />
+        </div>
+        <div class="title">
+            <h1>Spirit-of-HIT — Eventplaner (DA)</h1>
+            <div class="meta">Website-Stand: <strong id="lastUpdated">25.10.2025</strong> · Aktualisierung: mindestens alle 2 Wochen</div>
+        </div>
+    </header>
 
+    <nav>
+        <a href="#aufgabe">Aufgabenstellung</a>
+        <a href="#team">Teamvorstellung</a>
+        <a href="#vertretung">Vertretung &amp; Firmenevent</a>
+        <a href="#meilensteine">Meilensteine</a>
+        <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <main>
+        <section id="aufgabe">
+            <h2>Beschreibung der Aufgabenstellung</h2>
+            <p>Entwicklung und Bereitstellung eines Eventplaner-Backends und einer passenden Frontend-Oberfläche für das Projekt <strong>Spirit-of-HIT</strong> als Diplomarbeit (DA). Ziel ist es, Firmen-Events effizient zu planen, Teilnehmer zu verwalten, Locations und Zeitpläne zentral zu pflegen und eine externe Vertretung für Firmenkontaktpersonen bereitzustellen.</p>
+            <ul>
+                <li>Funktionen: Event-Erstellung, Teilnehmerverwaltung, Meilenstein-Tracking, Export (PDF/CSV), API-Schnittstelle</li>
+                <li>Technologie-Fokus: Spring Boot (Backend) / Angular oder HTML/CSS (Frontend) — je nach Projektentscheidung</li>
+                <li>Abgabefunktion: SingleFile-kompatible Seite, inkl. eingebetteter JS- und CSS-Funktionen</li>
+            </ul>
+        </section>
+
+        <section id="team">
+            <h2>Teamvorstellung</h2>
+            <p>Das Team arbeitet eng zusammen. Unten seht ihr die Kernmitglieder mit Kontaktdaten.</p>
+            <div class="team">
+                <div class="member">
+                    <img src="images/team_vincent.jpg" alt="Vincent" />
+                    <div class="info">
+                        <strong>Vincent Weinzinger</strong>
+                        Projektleitung · Backend
+                        <div class="meta">E-Mail: <a href="mailto:vorname.nachname@schule.tgm.ac.at">vorname.nachname@schule.tgm.ac.at</a></div>
+                    </div>
+                </div>
+
+                <div class="member">
+                    <img src="images/team_maria.jpg" alt="Maria" />
+                    <div class="info">
+                        <strong>Maria Musterfrau</strong>
+                        Frontend &amp; UX
+                        <div class="meta">E-Mail: <a href="mailto:maria.muster@schule.tgm.ac.at">maria.muster@schule.tgm.ac.at</a></div>
+                    </div>
+                </div>
+
+                <div class="member">
+                    <img src="images/team_leon.jpg" alt="Leon" />
+                    <div class="info">
+                        <strong>Leon Beispiel</strong>
+                        QA &amp; Dokumentation
+                        <div class="meta">E-Mail: <a href="mailto:leon.beispiel@schule.tgm.ac.at">leon.beispiel@schule.tgm.ac.at</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vertretung">
+            <h2>Vertretung nach außen (für Firmenevent)</h2>
+            <p>Diese Seite dient als offizielle Vertretung bei Firmenanfragen. Sie enthält Kontaktinformationen, Projektbeschreibung und aktuellen Status. Für externe Anfragen bitte folgende Vorgehensweise:</p>
+            <ol>
+                <li>Kontakt per Schul-E-Mail an das Projekt-Team im Betreff: <em>Spirit-of-HIT — Anfrage</em>.</li>
+                <li>Bei dringenden Anfragen: Telefonnummern im internen Projektordner (nicht öffentlich).</li>
+                <li>Firmenevents: Vorläufige Angebotsanfrage wird über das Projekt-Kontaktformular gesammelt und vom Projektleiter bearbeitet.</li>
+            </ol>
+        </section>
+
+        <section id="meilensteine">
+            <h2>Aktueller Status der Meilensteine</h2>
+            <div class="milestones" id="milestones">
+                <div class="ms">
+                    <div style="display:flex;justify-content:space-between"><strong>Projektplan &amp; Requirements</strong><span class="meta">abgeschlossen</span></div>
+                    <div class="bar"><i style="width:100%"></i></div>
+                </div>
+
+                <div class="ms">
+                    <div style="display:flex;justify-content:space-between"><strong>Backend - Grundfunktionen</strong><span class="meta" id="ms-backend">in Arbeit</span></div>
+                    <div class="bar"><i id="p-backend" style="width:60%"></i></div>
+                </div>
+
+                <div class="ms">
+                    <div style="display:flex;justify-content:space-between"><strong>Frontend - UI</strong><span class="meta" id="ms-frontend">in Arbeit</span></div>
+                    <div class="bar"><i id="p-frontend" style="width:45%"></i></div>
+                </div>
+
+                <div class="ms">
+                    <div style="display:flex;justify-content:space-between"><strong>Test &amp; QA</strong><span class="meta" id="ms-qa">ausstehend</span></div>
+                    <div class="bar"><i id="p-qa" style="width:5%"></i></div>
+                </div>
+
+                <div class="ms">
+                    <div style="display:flex;justify-content:space-between"><strong>Deployment &amp; Dokumentation</strong><span class="meta" id="ms-deploy">ausstehend</span></div>
+                    <div class="bar"><i id="p-deploy" style="width:0%"></i></div>
+                </div>
+            </div>
+            <p class="meta">Letzte Statusaktualisierung: <span id="statusDate">25.10.2025</span></p>
+        </section>
+
+        <section id="kontakt">
+            <h2>Kontaktdaten</h2>
+            <p>Bitte verwendet die Schul-E-Mail-Adressen für offizielle Anfragen. Telefonkontakte sind intern verfügbar.</p>
+            <div class="contact">
+                Projektleitung: <strong>Vincent Weinzinger</strong> — <a href="mailto:vorname.nachname@schule.tgm.ac.at">vorname.nachname@schule.tgm.ac.at</a><br/>
+                Sekretariat / Schule: <a href="mailto:info@tgm.ac.at">info@tgm.ac.at</a>
+            </div>
+            <hr/>
+            <p><strong>Wichtig:</strong> Diese Seite ist als offizielle Vertretung nach außen für Firmenevents gedacht. Bitte Aktualisierungen mindestens alle 14 Tage durchführen.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div>Abgabetermin: Tag vor den Herbstferien, spätestens 18:00 (Bitte in Kalender prüfen)</div>
+        <div>Seite erzeugt für DA — Spirit-of-HIT</div>
+    </footer>
+</div>
+
+<script>
+    // --- Inline JS: steuert Datumsanzeige und berechnet nächste Aktualisierung (14 Tage) ---
+    (function(){
+        // Default last updated date (ISO) - kann händisch angepasst werden
+        var last = '2025-10-25'; // YYYY-MM-DD
+        var lastDate = new Date(last + 'T12:00:00');
+        function formatDE(d){
+            var dd = String(d.getDate()).padStart(2,'0');
+            var mm = String(d.getMonth()+1).padStart(2,'0');
+            var yyyy = d.getFullYear();
+            return dd + '.' + mm + '.' + yyyy;
+        }
+        document.getElementById('lastUpdated').textContent = formatDE(lastDate);
+        document.getElementById('statusDate').textContent = formatDE(lastDate);
+
+        // Nächste fällige Aktualisierung (14 Tage)
+        var next = new Date(lastDate.getTime() + 14*24*60*60*1000);
+        var note = document.createElement('div');
+        note.className = 'meta';
+        note.style.marginTop='8px';
+        note.textContent = 'Nächste fällige Aktualisierung: ' + formatDE(next);
+        document.getElementById('meilensteine').appendChild(note);
+
+        // Simulierter Fortschritts-Update (Beispiel) - diese Daten sollten bei echten Updates per Hand angepasst werden
+        var progress = {backend:60, frontend:45, qa:5, deploy:0};
+        document.getElementById('p-backend').style.width = progress.backend + '%';
+        document.getElementById('p-frontend').style.width = progress.frontend + '%';
+        document.getElementById('p-qa').style.width = progress.qa + '%';
+        document.getElementById('p-deploy').style.width = progress.deploy + '%';
+
+        // Make anchors smooth
+        document.querySelectorAll('a[href^="#"]').forEach(function(a){
+            a.addEventListener('click',function(e){
+                e.preventDefault();
+                var target = document.querySelector(this.getAttribute('href'));
+                if(target) target.scrollIntoView({behavior:'smooth'});
+            });
+        });
+
+        // Hinweis: Wenn diese Seite mit dem Browser-Addon SingleFile gespeichert wird,
+        // werden die lokal referenzierten Bilder (z. B. images/tgm_logo.png) automatisch eingebettet.
+    })();
+</script>
 </body>
 </html>
