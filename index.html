@@ -126,31 +126,56 @@
             <h2>Aktueller Status der Meilensteine</h2>
             <div class="milestones" id="milestones">
                 <div class="ms">
-                    <div style="display:flex;justify-content:space-between"><strong>Projektplan &amp; Requirements</strong><span class="meta">abgeschlossen</span></div>
+                    <div style="display:flex;justify-content:space-between"><strong>Datenbank augesetzt und Datenstruktur getestet</strong><span class="meta">abgeschlossen am 15.06.2025</span></div>
                     <div class="bar"><i style="width:100%"></i></div>
                 </div>
 
                 <div class="ms">
-                    <div style="display:flex;justify-content:space-between"><strong>Backend - Grundfunktionen</strong><span class="meta" id="ms-backend">in Arbeit</span></div>
-                    <div class="bar"><i id="p-backend" style="width:60%"></i></div>
+                    <div style="display:flex;justify-content:space-between"><strong>Login und Registrierung der Firmen fertiggestellt</strong><span class="meta">abgeschlossen am 03.07.2025</span></div>
+                    <div class="bar"><i style="width:100%"></i></div>
                 </div>
 
                 <div class="ms">
-                    <div style="display:flex;justify-content:space-between"><strong>Frontend - UI</strong><span class="meta" id="ms-frontend">in Arbeit</span></div>
-                    <div class="bar"><i id="p-frontend" style="width:45%"></i></div>
+                    <div style="display:flex;justify-content:space-between"><strong>Kalenderfunktion implementiert</strong><span class="meta">abgeschlossen am 17.07.2025</span></div>
+                    <div class="bar"><i style="width:100%"></i></div>
                 </div>
 
                 <div class="ms">
-                    <div style="display:flex;justify-content:space-between"><strong>Test &amp; QA</strong><span class="meta" id="ms-qa">ausstehend</span></div>
-                    <div class="bar"><i id="p-qa" style="width:5%"></i></div>
+                    <div style="display:flex;justify-content:space-between"><strong>Chatfunktion mit den Admins implementiert	</strong><span class="meta">abgeschlossen am 01.08.2025</span></div>
+                    <div class="bar"><i style="width:100%"></i></div>
                 </div>
 
                 <div class="ms">
-                    <div style="display:flex;justify-content:space-between"><strong>Deployment &amp; Dokumentation</strong><span class="meta" id="ms-deploy">ausstehend</span></div>
-                    <div class="bar"><i id="p-deploy" style="width:0%"></i></div>
+                    <div style="display:flex;justify-content:space-between"><strong>Alle Funktionen vom Admin Dashboard fertiggestellt</strong><span class="meta">abgeschlossen am 15.08.2025</span></div>
+                    <div class="bar"><i style="width:100%"></i></div>
+                </div>
+
+                <div class="ms">
+                    <div style="display:flex;justify-content:space-between"><strong>Statische Werbewebsite fertiggestellt</strong><span class="meta">abgeschlossen am 15.09.2025</span></div>
+                    <div class="bar"><i style="width:100%"></i></div>
+                </div>
+
+                <div class="ms">
+                    <div style="display:flex;justify-content:space-between"><strong>Funktion der automatisierten Emails fertiggestellt</strong><span class="meta">in Arbeit - abzuschließen bis 01.11.2025</span></div>
+                    <div class="bar"><i style="width:50%"></i></div>
+                </div>
+
+                <div class="ms">
+                    <div style="display:flex;justify-content:space-between"><strong>Schüler und Schülerinnen ins System eingebunden</strong><span class="meta">ausstehend - abzuschließen bis 06.02.2026</span></div>
+                    <div class="bar"><i style="width:0%"></i></div>
+                </div>
+
+                <div class="ms">
+                    <div style="display:flex;justify-content:space-between"><strong>Werbewebsite dynamisch gestaltet</strong><span class="meta">ausstehend - abzuschließen bis 23.02.2026</span></div>
+                    <div class="bar"><i style="width:0%"></i></div>
+                </div>
+
+                <div class="ms">
+                    <div style="display:flex;justify-content:space-between"><strong>Testing abgeschlossen und Testergebnisse eingearbeitet</strong><span class="meta">ausstehend- abzuschließen am 13.03.2026</span></div>
+                    <div class="bar"><i style="width:0%"></i></div>
                 </div>
             </div>
-            <p class="meta">Letzte Statusaktualisierung: <span id="statusDate">25.10.2025</span></p>
+            <p class="meta">Letzte Statusaktualisierung: <span id="statusDate">07.10.2025</span></p>
         </section>
 
         <section id="kontakt">
@@ -194,13 +219,6 @@
         note.style.marginTop='8px';
         note.textContent = 'Nächste fällige Aktualisierung: ' + formatDE(next);
         document.getElementById('meilensteine').appendChild(note);
-
-        // Simulierter Fortschritts-Update (Beispiel) - diese Daten sollten bei echten Updates per Hand angepasst werden
-        var progress = {backend:60, frontend:45, qa:5, deploy:0};
-        document.getElementById('p-backend').style.width = progress.backend + '%';
-        document.getElementById('p-frontend').style.width = progress.frontend + '%';
-        document.getElementById('p-qa').style.width = progress.qa + '%';
-        document.getElementById('p-deploy').style.width = progress.deploy + '%';
 
         // Make anchors smooth
         document.querySelectorAll('a[href^="#"]').forEach(function(a){
