@@ -27,7 +27,12 @@
         section h2{margin-top:0}
 
         /* Team grid */
-        .team{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 18px 24px;
+            justify-items: start;
+        }
         .member{display:flex;gap:12px;align-items:center}
         .member img{width:72px;height:72px;border-radius:10px;object-fit:cover}
         .member .info{font-size:0.95rem}
@@ -88,7 +93,7 @@
                     <div class="info">
                         <strong>Vincent Weinzinger</strong>
                         Projektleitung · Backend
-                        <div class="meta">E-Mail: <a href="mailto:vvweinzinger@student.tgm.ac.at">vweinzinger@student.tgm.ac.at</a></div>
+                        <div class="meta">E-Mail: <a href="mailto:vweinzinger@student.tgm.ac.at">vweinzinger@student.tgm.ac.at</a></div>
                     </div>
                 </div>
 
@@ -109,8 +114,18 @@
                         <div class="meta">E-Mail: <a href="mailto:nfurtner@student.tgm.ac.at">nfurtner@student.tgm.ac.at</a></div>
                     </div>
                 </div>
+
+                <div class="member">
+                    <img src="images/gustav.jpg" alt="Gustav" />
+                    <div class="info">
+                        <strong>Gustav Glatzel</strong>
+                        Fullstack &amp; Deployment
+                        <div class="meta">E-Mail: <a href="mailto:gglatzel@student.tgm.ac.at">gglatzel@student.tgm.ac.at</a></div>
+                    </div>
+                </div>
             </div>
         </section>
+
 
         <section id="vertretung">
             <h2>Vertretung nach außen (für Firmenevent)</h2>
